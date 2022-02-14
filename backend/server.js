@@ -26,7 +26,7 @@ const server = express()
 const port = process.env.PORT || 3001
 
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 
 // ************************* MIDDLEWARES ********************************
@@ -70,11 +70,14 @@ server.use('/', userRouter)
 server.use('/', orderRouter)
 server.use('/', paymentRouter)
 
-server.use(express.static(path.join(__dirname, "../frontend/build")));
+if(process.env.NODE_ENV === "production"){
+    server.use(express.static("../frontend/build"));
+}
+// server.use(express.static(path.join(__dirname, "../frontend/build")));
 
-server.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-});
+// server.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+// });
 
 // ************************* Mongo Connection *******************************
 mongoose.connect(process.env.MONGO_CONNECTION)

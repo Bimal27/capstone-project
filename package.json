@@ -5,9 +5,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config ./backend/server.js",
+    "dev": "node -r dotenv/config ./backend/server.js",
     "start": "node -r dotenv/config ./backend/server.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
