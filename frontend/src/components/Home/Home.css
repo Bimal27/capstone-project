@@ -1,0 +1,143 @@
+.welcome {
+  color: #5b0766;
+ 
+}
+.welcome > h1 {
+  margin: 3vmax;
+  font: 600 2.5vmax 'Roboto';
+}
+
+.productContainer{
+  margin-top: -200px;
+}
+.homeHeading {
+  display: none;
+  /* text-align: center;
+  font-family: Roboto;
+  font-size: 1.5vmax;
+  border-bottom: 2px solid rgba(255, 239, 239, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 2vmax auto;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  color: white; */
+}
+
+.headingLine{
+  display: none;
+  
+}
+
+.productCard {
+  width: 22vmax;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  color: rgb(48, 48, 48);
+  margin: 1.2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0vmax;
+  border: white;
+}
+
+.productCard > img {
+  width: 12vmax;
+  height: 12vmax;
+  object-fit: contain;
+  margin-top: 10px;
+ 
+}
+#product > a{
+  text-decoration: none;
+  font-size: 14px !important;
+}
+.productName{
+  margin: 0 !important;
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical
+}
+.price {
+  color: tomato;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-size: 1.3vmax;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 10px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-1vmax);
+}
+.page-link{
+  border: none;
+}
+.pageLinkActive{
+ background-color: rgb(114, 144, 243) !important;
+ border: none;
+ border-radius: 5px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .productContainer{
+  margin-top: 0px;
+   
+}
+.homeHeading {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 14px;
+}
+.headingLine{
+  display: block;
+  width: 40px;
+  border: 1px solid red;
+  text-align: center;
+  margin-left: 44%;
+  
+}
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+
+  .productCard > div {
+    margin: 0vmax;
+    display: block;
+  }
+
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1vmax 'Roboto';
+  }
+  .review{
+    font-size: 12px;
+    margin-top: 0px;
+  }
+}
+
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vmax;
+}
+
+.pageLinkActive {
+  background-color: rgb(85, 131, 231);
+}
+
+.pageLinkActive {
+  color: white;
+}

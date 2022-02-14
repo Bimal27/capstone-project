@@ -1,0 +1,143 @@
+.ProductDetails {
+  background-color: #fcfcfc;
+  width: 100vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+}
+
+.CarouselImage {
+   width: 18vmax;
+  height: 18vmax;
+  object-fit: contain;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.image {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.image:hover {
+  transform: scale(1.1);
+  object-fit: cover;
+}
+
+.ProductDetails > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly;*/
+  padding: 2vmax;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+.pricedetail {
+  color: rgb(204, 50, 23);
+}
+.input {
+  width: 52px;
+  height: 30px;
+  text-align: center;
+  color: black;
+  border: none;
+ 
+}
+.reviewButton{
+  text-align: center
+}
+.submitReview {
+  border: 2px solid rgb(173, 172, 172);
+  background-color: white;
+  font: 600  'Roboto';
+  border-radius: 10px;
+  /* padding: 0.6vmax 2vmax; */
+  margin: 1vmax 0;
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+  height: 36px;
+  width: 150px;
+ 
+}
+.submitReview:hover {
+  background-color: rgb(202, 202, 202);
+  transform: scale(1.1);
+}
+
+.submitDialog {
+  display: flex;
+  flex-direction: column;
+}
+.submitDialogTextArea {
+  border: 1px solid rgba(0, 0, 0, 0.082);
+  margin: 1vmax 0;
+  outline: none;
+  padding: 1rem;
+  font: 300 1rem "Roboto";
+}
+
+.reviewHeading {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.5vmax;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 2vmax auto;
+  color: rgb(0, 0, 0, 0.7);
+}
+.reviews {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+.reviewCard {
+  flex: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+  border: 1px solid rgba(90, 88, 88, 0.116);
+  width: 30vmax;
+  align-items: center;
+  margin: 1vmax;
+  padding: 3vmax;
+  background-color: white;
+}
+
+.reviewCard > div > img {
+  width: 5vmax;
+}
+.userName {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.noReviews {
+  font: 400 1.3vmax 'Gill Sans';
+  text-align: center;
+  color: rgba(0, 0, 0, 0.548);
+}
+
+@media screen and (max-width: 600px) {
+  .ProductDetails {
+    flex-direction: column;
+    height: unset;
+  }
+  .reviews{
+     display: inline-block;
+     
+     margin-left: 70px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .cart {
+      display: block;
+    }
+  }
+
+  .ProductDetails > div:last-child {
+    align-items: center;
+  }
+  
+}

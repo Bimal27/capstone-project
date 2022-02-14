@@ -1,0 +1,130 @@
+.dashboard {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.dashboardContainer {
+  border-left: 1px solid rgba(0, 0, 0, 0.13);
+  background-color: rgb(241, 233, 233);
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.dashboardContainer > h1 {
+  color: rgba(0, 0, 0, 0.733);
+  font: 300 2rem "Roboto";
+  text-align: center;
+  width: 50%;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+.dashboardSummary {
+  margin: 0.6rem 0;
+}
+
+.dashboardSummary > div {
+  display: flex;
+  background-color: rgb(241, 233, 233);
+ 
+}
+.dashboardSummaryBox2{
+  margin-left: 3px;
+}
+.dashboardSummaryBox2 > a {
+  color: rgb(0, 0, 0);
+  font: 300 1.2rem "Roboto";
+  text-align: center;
+  background-color: white;
+  text-decoration: none;
+  padding: 1.1rem;
+  width: 17vmax;
+  height: auto;
+  margin: 1.5rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 3px 3px rgb(194, 192, 192);
+  margin: 28px;
+  
+ 
+}
+.dashboardSummaryBox2 > a > p {
+  margin-bottom: 5px;
+}
+
+.dashboardSummaryBox2 > a:first-child {
+ 
+  color: rgb(14, 12, 12);
+  border-radius: 5px;
+}
+.orders{
+  
+  color: rgb(14, 12, 12);
+  border-radius: 5px;
+}
+
+
+.ChartDoughnut{
+  display: flex;
+}
+.lineChart {
+  width: 60%;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  box-sizing: border-box;
+}
+
+.doughnutChart {
+  width: 25vmax;
+  margin: auto;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    display: unset;
+  
+  }
+
+  .dashboardContainer {
+    border-left: none;
+    padding: 0;
+  }
+
+  .dashboardSummary > div > p {
+    margin: 0;
+  }
+
+  .dashboardSummaryBox2 > a {
+    padding: 0.5rem;
+    margin: 1rem;
+    font: 300 0.9rem "Roboto";
+  }
+  .ChartDoughnut{
+  display: unset;
+}
+  .lineChart {
+  width: 76%;
+  margin: auto;
+}
+  .doughnutChart {
+  width: 40vmax;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+
+}
+}

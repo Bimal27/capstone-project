@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+.orderDetailsPage {
+  background-color: white;
+}
+
+.orderDetailsContainer > h3 {
+  font-family:  'Fira Sans', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  color: rgb(245, 84, 10);
+  text-decoration: underline;
+}
+
+.orderDetailsContainer {
+  padding: 1vmax;
+  padding-bottom: 0%;
+  margin-left: 4vmax;
+}
+
+.orderDetailsContainer > p {
+  font: 400 1.3vmax "Fira Sans";
+}
+
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+  margin: 2vmax;
+}
+
+.orderDetailsContainerBox > div {
+  display: flex;
+}
+
+.orderDetailsContainerBox > div > p {
+  font: 400 1.3vmax "Fira Sans";
+  color: black;
+}
+.orderDetailsContainerBox > div > span {
+  margin: 0 1vmax;
+  font: 200 1.3vmax "Fira Sans";
+  color: #575757;
+}
+
+.orderDetailsCartItems > p {
+  font: 400 1.8vmax "Fira Sans";
+}
+
+.orderDetailsCartItems {
+  padding: 2vmax 5vmax;
+  border-top: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.orderDetailsCartItemsContainer > div {
+  display: flex;
+  font: 400 1vmax "Fira Sans";
+  align-items: center;
+  margin: 2vmax 0;
+}
+
+.orderDetailsCartItemsContainer > div > img {
+  width: 4vmax;
+}
+
+.orderDetailsCartItemsContainer > div > a {
+  color: #575757;
+  margin: 0 2vmax;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.orderDetailsCartItemsContainer > div > span {
+  font: 100 1vmax "Fira Sans";
+  font-size: 14px;
+  margin-left: 80px;
+  color: #5e5e5e;
+}
+
+@media screen and (max-width: 600px) {
+  .orderDetailsContainer{
+  margin-left: 1vmax;
+  }
+  .orderDetailsContainer > h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.orderDetailsContainer > h4{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+  margin: 1vmax;
+}
+  .orderDetailsContainer > p {
+    font: 400 5vw "Fira Sans";
+  }
+
+  .orderDetailsContainerBox > div {
+    margin: 1vw 0;
+  }
+
+  .orderDetailsContainerBox > div > p {
+    font: 400 4vw "Fira Sans";
+  }
+  .orderDetailsContainerBox > div > span {
+    font: 100 4vw "Fira Sans";
+  }
+  .orderDetailsCartItems {
+  padding: 1vmax 2vmax;
+  
+}
+.orderDetailsCartItems >h4{
+  font-size: 16px;
+}
+
+  .orderDetailsCartItems > p {
+    font: 400 6vw "Fira Sans";
+  }
+
+  .orderDetailsCartItemsContainer > div {
+    font: 400 4vw "Fira Sans";
+    margin: 4vw 0;
+  }
+
+  .orderDetailsCartItemsContainer > div > img {
+    width: 10vw;
+  }
+
+  .orderDetailsCartItemsContainer > div > a {
+    width: 50%;
+    letter-spacing: 0;
+  }
+
+  .orderDetailsCartItemsContainer > div > span {
+    font: 100 4vw "Roboto";
+
+    margin-left: 0
+  }
+}

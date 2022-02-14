@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+.cartHeader{
+    display: flex;
+    background-color:rgb(238, 149, 90);
+    justify-content: space-between;
+    margin: 20px;
+    margin-left: 72px;
+    margin-right: 72px;
+    color: black;
+}
+.quantity{
+    margin-left: 92px !important;
+}
+.cartHeader > p {
+    margin:10px;
+    margin-right: 24px;
+    margin-left: 20px;
+    font-family: 'Fira Sans', sans-serif;
+}
+.cartItem{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 84px;
+    margin-right: 80px;
+    align-items: start;
+}
+.qntyButton{
+    margin-right: 300px;
+    margin-left: 0px; 
+}
+.products{
+   
+    margin-left: 50px;
+    flex-grow: 1;
+}
+.inputcart{
+    border: none;
+     width: 36px;
+     overflow: hidden;
+     padding-left: 12px;
+}
+.subTotalPrice{
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+
+.cartGross {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+ 
+  
+}
+.cartGrossBox {
+  border-top: 3px solid red;
+  margin: 1vmax 6vmax;
+  box-sizing: border-box;
+  padding: 2vmax 0;
+  font: 300 1.1rem ;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.cartGrossBox > p{
+    font-size: 1.1rem;
+}
+
+.checkOutBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.checkOutBtn > button {
+  background-color:rgb(248, 204, 9);
+  color: black;
+  border: none;
+  padding: 0.8vmax 2.5vmax;
+  width: 50%;
+  font: 300 1.2vmax "Roboto";
+  margin: 1vmax 9vmax;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.noCartItems{
+
+  margin: auto;
+  height: 30vh;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 200px;
+  
+}
+.products > h6 {
+ font-size: 16px;
+   font-family: 'Fira Sans', sans-serif;
+  inline-size: 296px; 
+  overflow: hidden;
+  text-align: unset;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+ .cartHeader {
+    width: 98%;
+    font: 300 1.7vmax;
+    margin-left: 5px;
+    margin-right: 4px;
+  
+  }
+  .product{
+   display: inline !important;
+   margin-left: 5px;
+
+}
+.products > h6 {
+ margin: 5px!important;
+
+ overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: 100%
+}
+.quantity{
+    margin-left: 20px !important;
+}
+
+.cartItem{
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+.products{
+    margin-left: 5px;
+    margin-top: 0px;
+}
+.cartHeader > p {
+    margin:5px;
+}
+.input{
+    border: none;
+    
+    
+}
+.subTotalPrice{
+    margin-left: -230px;
+}
+.image{
+    width: 72px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 10px;
+}
+.qntyButton {
+margin-right: 52px;
+margin-left: 0;
+   
+}
+.cartGrossBox{
+    margin-right: 24px;
+}
+.checkOutBtn{
+    display: block;
+    margin-bottom: 20px;
+}
+.checkOutBtn > button {
+width: 50%;
+}
+}

@@ -1,0 +1,49 @@
+.carousel{
+   position: relative;
+ 
+}
+.carousel-caption{
+   margin-bottom: 50px;
+}
+/* .carousel-indicators [data-bs-target]{
+   box-sizing: content-box;
+   flex: 0 1 auto;
+   width: 30px;
+   height: 3px;
+   padding: 0px;
+   margin-left: 3px;
+   margin-right: 3px;
+   text-indent: -999px;
+   cursor: pointer;
+   background-color: #fff;
+   background-clip: padding-box;
+   border:0px;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent;
+   opacity: .5;
+    transition: opacity .6s ease;
+} */
+.visually-hidden{
+   display: none;
+}
+.carousel-indicators{
+   display: none;
+}
+/* .CarouselItem{
+   position: relative;
+   
+}
+.CarouselItem > img{
+ background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1))
+}
+#text{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.Carousel-indicators-28{
+   display: none;
+} */
