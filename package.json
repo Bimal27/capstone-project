@@ -6,8 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node -r dotenv/config ./backend/server.js",
-    "start": "node -r dotenv/config ./backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "node -r dotenv/config ./backend/server.js"
   },
   "author": "",
   "license": "ISC",
