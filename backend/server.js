@@ -90,6 +90,6 @@ mongoose.connection.on("connected", () => {
     console.log(`Server running on port ${port}`);
   });
 });
-mongoose.connection.on("error", () => {
-  console.log("error");
-});
+// mongoose.connection.on("error", () => {
+//   console.log("error");
+// });
