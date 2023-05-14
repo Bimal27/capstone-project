@@ -114,7 +114,8 @@ userRouter.get('/logout', async (req, res, next) => {
 // ******* Forget Password **********
 
 userRouter.post('/forgotpassword', async (req, res, next) => {
-  const user = await User.findOne({ email: req.body.email })
+  try{
+    const user = await User.findOne({ email: req.body.email })
 
   if (!user) {
     return next(new ErrorResponse('User not found', 404))
@@ -124,6 +125,10 @@ userRouter.post('/forgotpassword', async (req, res, next) => {
   const resetToken = user.getResetPasswordToken()
 
   await user.save()
+  }catch(error){
+     next(error)
+  }
+  
 
   // const resetPasswordUrl = `${req.protocol}://${req.get(
   //   'host',
@@ -240,7 +245,9 @@ isAuthenticatedUser,
 // ****************** Update User Profile ****************************
 
 userRouter.put("/me/:id", isAuthenticatedUser, async (req, res, next) => {
-  const updateProfile = new User({
+  
+  try{
+   const updateProfile = new User({
     _id: req.params.id,
     name: req.body.name,
     email: req.body.email
@@ -255,6 +262,10 @@ userRouter.put("/me/:id", isAuthenticatedUser, async (req, res, next) => {
     .catch(error => {
       res.status(400).json({ error: error });
     });
+  }catch(error){
+    next(error)
+  }
+ 
 });
 
 // ****************** Get all the Users (Admin) ****************************
