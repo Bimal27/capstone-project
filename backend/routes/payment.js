@@ -25,8 +25,7 @@ paymentRouter.post("/payment/process", async (req, res, next) =>{
 
 paymentRouter.get("/stripeapikey", async (req, res, next) => {
   res.status(200).json({ stripeApiKey: process.env.STRIPE_API_KEY });
-    
-    }catch(error){
+}catch(error){
 next(error)
 }
  
