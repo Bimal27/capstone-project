@@ -12,7 +12,8 @@ const orderRouter = express.Router()
 // ************ Create new order **********
 
 orderRouter.post('/order/new',isAuthenticatedUser, async (req, res, next) => {
-    const {
+    try{
+      const {
       shippingInfo,
       orderItems,
       paymentInfo,
@@ -36,12 +37,18 @@ orderRouter.post('/order/new',isAuthenticatedUser, async (req, res, next) => {
       success: true,
       order,
     })
+    }catch(error){
+        next(error)
+    }
+    
 })
 
 // ************ Get single order **********
 
 orderRouter.get('/order/:id',isAuthenticatedUser, async (req, res, next) => {
-  const order = await orderModel.findById(req.params.id).populate(
+    
+    try{
+       const order = await orderModel.findById(req.params.id).populate(
     "user",
     "name email"
   )
@@ -53,16 +60,25 @@ orderRouter.get('/order/:id',isAuthenticatedUser, async (req, res, next) => {
     success: true,
     order,
   });
+    }catch(error){
+    next(error)
+    }
+ 
 })
 
 // ************ Get logged in user order **********
 
 orderRouter.get('/orders/me',isAuthenticatedUser,  async (req, res, next) => {
-    const orders = await orderModel.find({ user: req.user._id })
+    try{
+     const orders = await orderModel.find({ user: req.user._id })
     res.status(200).json({
       success: true,
       orders,
     })
+    }catch(error){
+    next(error)
+    }
+   
 })
 
 // ************ Get all orders -- Admin **********
@@ -135,11 +151,17 @@ orderRouter.put(
 )
 
 async function updateStock(id, quantity) {
-  const product = await productModel.findById(id)
+    
+    try{
+      const product = await productModel.findById(id)
 
   product.Stock -= quantity
 
   await product.save({ validateBeforeSave: false })
+    }catch(error){
+      next(error)
+    }
+
 }
 
 // ************ Delete orders -- Admin **********
