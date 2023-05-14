@@ -73,18 +73,24 @@ productRouter.get(
   isAuthenticatedUser,
   authorizedRoles("admin"),
   async (req, res, next) => {
-    const products = await productModel.find();
+    try{
+      const products = await productModel.find();
 
     res.status(200).json({
       success: true,
       products
-    });
-  }
-);
+    })
+    
+    }catch(error){
+      next(error)
+    }
+  });
 
 //*************** GET PRODUCTS BY ID ********************/
 productRouter.get('/product/:id', async (req, res, next) => {
-  const product = await productModel.findById(req.params.id)
+  
+  try{
+      const product = await productModel.findById(req.params.id)
 
   if (!product) {
     return next(new ErrorResponse('Product not found', 404))
@@ -93,6 +99,11 @@ productRouter.get('/product/:id', async (req, res, next) => {
     success: true,
     product,
   })
+  }catch(error){
+    next(error)
+  }
+  
+
 })
 
 //*************** UPDATE PRODUCT  Admin ********************/
